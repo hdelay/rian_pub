@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리앙 퍼블리싱 가이드</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- SyntaxHighlighter -->
+    <script type="text/javascript" src="../syntaxhighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+	<link type="text/css" rel="stylesheet" href="../syntaxhighlighter/styles/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- js -->
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/common.js"></script>
+
+</head>
+<body>
+
+<div class="wrap">
+    
+    <!-- aside -->
+    <aside class="gnb">
+        <h1 class="logo"><a href="./index.html" title="메인으로 이동">리앙 퍼블리싱 가이드 로고</a></h1>
+        <nav>
+            <ul>
+                <li><a href="./menu_01.html">프로젝트 환경</a></li>
+                <li><a href="./menu_02.html">HTML 작업규칙</a></li>
+                <li><a href="./menu_03.html">CSS 작업규칙</a></li>
+                <li><a href="./menu_04.html">컴포넌트 라이브러리</a></li>
+                <li><a href="./menu_05.html">레이아웃</a></li>
+                <li><a href="./menu_06.html">js 라이브러리</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- //aside -->
+
+    <div class="content_wrap">
+        <!-- header -->
+        <header>
+            <div class="header_info">
+                <h2>프로젝트 환경</h2>
+            </div>
+            <div class="btn_menu">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- main -->
+        <div class="main">
+
+            <div class="main_in">
+
+                
+                <div class="left">
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_01_01">프로젝트 기본환경</h3>
+                        </div>
+                        <div class="tbl_group row">
+                            <table>
+                                <caption>프로젝트 기본환경 테이블</caption>
+                                <colgroup>
+                                    <col width="20%"/>
+                                    <col width="30%"/>
+                                    <col width="20%"/>
+                                    <col width="30%"/>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">문서 및 버전</th>
+                                        <td colspan="3">HTNL5, CSS3</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">PC 웹 호환성</th>
+                                        <td colspan="3">
+                                            <div class="browser_group">
+                                                <img src="../images/ico/ico_crome.png" alt="크롬 브라우저">
+                                                <span>크롬</span>
+                                            </div>
+                                            <div class="browser_group">
+                                                <img src="../images/ico/ico_firefox.png" alt="파이어폭스 브라우저">
+                                                <span>파이어폭스</span>
+                                            </div>
+                                            <div class="browser_group">
+                                                <img src="../images/ico/ico_opera.png" alt="오페라 브라우저">
+                                                <span>오페라</span>
+                                            </div>
+                                            <div class="browser_group">
+                                                <img src="../images/ico/ico_sapari.jpg" alt="사파리 브라우저">
+                                                <span>사파리</span>
+                                            </div>
+                                            <div class="browser_group">
+                                                <img src="../images/ico/ico_edge.png" alt="엣지 브라우저">
+                                                <span>엣지</span>
+                                            </div>
+                                            <div class="browser_group">
+                                                <img src="../images/ico/ico_ie9.png" alt="ie9 브라우저">
+                                                <span>ie9(6/15 중단)</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">해상도 정책</th>
+                                        <td colspan="3">
+                                            PC UI : 768px 이상<br/>
+                                            MO UI : 767px 이하 및 360px 까지 맞출것
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">마크업 validation</th>
+                                        <td colspan="3">
+                                            <div class="txtlink_group">
+                                                <a href="https://validator.w3.org/" target="_blank" title="새 창 열림">https://validator.w3.org/</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_01_02">파일/폴더 규칙</h3>
+                        </div>
+                        <div class="tbl_group column">
+                            <table>
+                                <caption>파일/폴더 규칙</caption>
+                                <colgroup>
+                                    <col width="25%"/>
+                                    <col width="25%"/>
+                                    <col width="25%"/>
+                                    <col width="25%"/>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">분류 폴더</th>
+                                        <th scope="col">서브 폴더</th>
+                                        <th scope="col">파일 이름</th>
+                                        <th scope="col">파일 설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>html</td>
+                                        <td></td>
+                                        <td>화면명 또는 화면ID.html</td>
+                                        <td>
+                                            화면설계서에 따라 html 네이밍<br/>
+                                            또는 화면이름에 따라 html 네이밍
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>css</td>
+                                        <td></td>
+                                        <td>
+                                            reset.css <br/>
+                                            common.css <br/>
+                                            style.css
+                                        </td>
+                                        <td>
+                                            reset - CSS 리셋 <br/>
+                                            common - 컴포넌트 CSS <br/>
+                                            style - 화면 CSS
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>js</td>
+                                        <td></td>
+                                        <td>
+                                            common.js <br/>
+                                            jquery-3.6.0.js 또는 min <br/>
+                                            jquery-ui-1.13.1.js 또는 min <br/>
+                                            Swiper.js 또는 slick.js 또는 bxSlider.js 또는 flexSlider.js
+                                        </td>
+                                        <td>
+                                            common - 퍼블리싱 js
+                                            제이쿼리 <br/>
+                                            제이쿼리 ui <br/>
+                                            슬라이더 플러그인
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>images</td>
+                                        <td>
+                                            bg <br/>
+                                            content <br/>
+                                            ico
+                                        </td>
+                                        <td>
+                                            logo.svg 또는 png <br/>
+                                            favicon
+                                        </td>
+                                        <td>
+                                            이미지 - 배경 <br/>
+                                            이미지 - 컨텐츠 <br/>
+                                            이미지 - 아이콘
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>font</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            기본 NotoSansKR
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>기타폴더</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>기타 플러그인 폴더</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_01_03">프로젝트 퍼블리싱 체크리스트</h3>
+                        </div>
+
+                        <div class="chk_list">
+                            <ul>
+                                <li>일정확인</li>
+                                <li>크로스브라우징 어디까지 맞추는지 확인 필요</li>
+                                <li>웹접근성 맞춤 유무</li>
+                                <li>select 디자인 필요한지 > pm님 확인필요</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_01_04">퍼블리싱 리스트 파일</h3>
+                        </div>
+
+                        <div class="tbl_group row">
+                            <table>
+                                <caption>프로젝트 기본환경 테이블</caption>
+                                <colgroup>
+                                    <col width="35%"/>
+                                    <col width="65%"/>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">퍼블리싱 리스트 파일 다운로드</th>
+                                        <td>
+                                            <div class="txtdown_group">
+                                                <a href="../download/pub_list.html" target="_blank" title="파일 다운로드" download>../pub_list.html</a>
+                                                <input type="text">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_01_05">웹접근성 유의사항</h3>
+                        </div>
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt>이미지에 alt 속성 사용</dt>
+                                <dd>
+                                    <span>의미있는 이미지</span><br/>
+                                    <pre class="brush: html;">
+                                        <img src="../images/ico/ico_edge.png" alt="엣지 브라우저 아이콘">
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <span>의미없는 이미지일때 alt속성 생략 가능</span><br/>
+                                    <pre class="brush: html;">
+                                        <img src="../images/ico/ico_alink.svg" alt="">
+                                    </pre>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>body 상단에 본문 바로가기/메뉴 바로가기 링크 제공</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <!-- skip nav -->
+                                        <div class="skip_nav" title="스킵 네비게이션">
+                                            <ul>
+                                                <li><a href="#main" title="본문 바로가기">본문 바로가기</a></li>
+                                                <li><a href="#nav" title="메뉴 바로가기">메뉴 바로가기</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- //skip nav -->
+                                    </pre>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>메뉴 1depth>2depth>3depth 순으로 tab 이동</dt>
+                                <dd>
+                                    <span>탭메뉴와 내용이 분리된 경우 따로 제목이 없다면 숨김처리 된 제목을 사용</span>
+                                    <pre class="brush: html;">
+                                        <div class="tab_group">
+                                            <ul>
+                                                <li class="on"><a href="" rel="tab_content_01">탭버튼</a></li>
+                                                <li><a href="" rel="tab_content_02">탭버튼</a></li>
+                                                <li><a href="" rel="tab_content_03">탭버튼</a></li>
+                                            </ul>
+                                            <div class="tab_content">
+                                                <div class="on tab_content_01">
+                                                    <h3 class="hidden">숨김처리된 제목</h3>
+                                                    내용1
+                                                </div>
+                                                <div class="tab_content_02">
+                                                    <h3 class="hidden">숨김처리된 제목</h3>
+                                                    내용2
+                                                </div>
+                                                <div class="tab_content_03">
+                                                    <h3 class="hidden">숨김처리된 제목</h3>
+                                                    내용3
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </pre>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>새 창이 열리는 링크의 경우 title속성 표시</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <a href="" target="_blank" title="새 창 열림">버튼명</a>
+                                    </pre>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>입력요소에는 반드시 label연결 또는 title값을 지정</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <label for="input_01">ID 입력</label>
+                                        <input type="text" id="input_01" title="ID입력">
+                                    </pre>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>분리된 입력폼은 각각 title 지정</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <div class="input_group input_tell">
+                                            <div class="selectbox">
+                                                <select name="" id="" title="전화번호 앞자리 선택">
+                                                    <option value="">선택</option>
+                                                    <option value="">010</option>
+                                                    <option value="">031</option>
+                                                    <option value="">042</option>
+                                                </select>
+                                            </div>
+                                            <div class="inputbox">
+                                                <input type="text" id="" title="전화번호 중간자리 입력">
+                                            </div>
+                                            <div class="inputbox">
+                                                <input type="text" id="" title="전화번호 뒷자리 입력">
+                                            </div>
+                                        </div>
+                                    </pre>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>숨김처리에 hidden/display:none 속성 사용 금지</dt>
+                                <dd>
+                                    <pre class="brush: css;">
+                                        /* 숨김처리 */
+                                        .hidden {
+                                            position: absolute;
+                                            top: -9999em;
+                                            left: -9999em;
+                                            width: 0;
+                                            height: 0;
+                                            font-size: 0;
+                                        }
+                                    </pre>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt></dt>
+                                <dd></dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="right">
+                    <ul>
+                        <li><a href="">프로젝트 기본환경</a></li>
+                        <li><a href="">파일/폴더규칙</a></li>
+                        <li><a href="">프로젝트 퍼블리싱 체크리스트</a></li>
+                        <li><a href="">퍼블리싱 리스트 파일</a></li>
+                        <li><a href="">웹접근성 유의사항</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- //main -->
+
+        <footer>
+            <div class="copyright">COPYRIGHT(C) RIAN COMMUNICATIONS ALL RIGHTS RESERVED.</div>
+        </footer>
+    </div>
+
+</div>
+
+</body>
+</html>

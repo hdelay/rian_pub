@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+
+/* ============================================================
+    공통
+============================================================ */
+/* 제목 h */
+.tit_group h3 {
+    padding: 20px 0 10px;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: -1px;
+}
+.tit_group h4 {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: -1px;
+}
+
+/* 테이블 table */
+.tbl_group.column {
+    border: 1px solid #222;
+}
+.tbl_group.column table {
+    width: 100%;
+}
+.tbl_group.column table thead tr th,
+.tbl_group.column table tbody tr td {
+    font-size: 14px;
+    padding: 10px;
+}
+.tbl_group.column table thead tr th {
+    background-color: #f5f5f5;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-weight: 300;
+    color: #888;
+}
+.tbl_group.column table thead tr th:first-child {
+    border-left: 1px solid #ddd;
+}
+.tbl_group.column table tbody tr td {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.tbl_group.column table tbody tr th {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.tbl_group.column table tbody tr td xmp {
+    text-align: center;
+    margin: 0;
+    font-family: 'NotoSansKR', Arial, Sans-serif;
+}
+
+
+.tbl_group.row {
+    border: 1px solid #222;
+}
+.tbl_group.row table {
+    width: 100%;
+}
+.tbl_group.row table tbody tr th,
+.tbl_group.row table tbody tr td {
+    font-size: 14px;
+    padding: 10px;
+}
+.tbl_group.row table tbody tr th {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-top: none;
+    font-weight: 300;
+    color: #888;
+}
+.tbl_group.row table tbody tr td {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.browser_group {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.browser_group + .browser_group {
+    margin-left: 10px;
+}
+.browser_group img {
+    width: 30px;
+    height: 30px;
+}
+.browser_group span {
+    font-size: 12px;
+}
+.browser_group:last-child {
+    opacity: .5;
+}
+
+.txtlink_group a {
+    display: inline-block;
+    position: relative;
+    padding: 2px 10px;
+    padding-left: 30px;
+    border-radius: 20px;
+}
+.txtlink_group a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 14px;
+    height: 14px;
+    background-image: url(../images/ico/ico_alink.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 14px;
+}
+.txtlink_group a:hover {
+    background-color: #f5f5f5;
+    text-decoration: underline;
+}
+.txtdown_group a {
+    display: inline-block;
+    position: relative;
+    padding: 2px 10px;
+    padding-left: 33px;
+    border-radius: 20px;
+}
+.txtdown_group a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 17px;
+    height: 17px;
+    background-image: url(../images/ico/ico_download.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 17px;
+}
+.txtdown_group a:hover {
+    background-color: #f5f5f5;
+    text-decoration: underline;
+}
+
+/* ============================================================
+    syntaxhighlighter
+============================================================ */
+.syntaxhighlighter {
+    font-size: 0.8em !important;
+    margin: 0 !important;
+    margin-top: 5px !important;
+}
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+    font-family: 'NotoSansKR', Arial, Sans-serif !important;
+    font-weight: 200 !important;
+    font-size: 12px !important;
+    color: #222 !important;
+}
+.syntaxhighlighter .comments,
+.syntaxhighlighter .comments a {
+    font-size: 12px !important;
+}
+.syntaxhighlighter .keyword {
+    font-weight: 400 !important;
+    color: #5da1fa !important;
+}
+.syntaxhighlighter table td.gutter .line {
+    padding: .3em 0.5em .3em 1em !important;
+    background-color: #f5f5f5 !important;
+    font-size: 12px !important; 
+    color: #999 !important;
+}
+.syntaxhighlighter table td.code {
+    border: 1px solid #ddd !important;
+    box-sizing: border-box !important;
+    border-left: none !important;
+}
+.syntaxhighlighter table td.code .line {
+    padding: .3em 1em !important;
+    letter-spacing: 1px;
+}
+.syntaxhighlighter .line.alt1 {
+    background-color: #f5f5f5 !important;
+}
+.syntaxhighlighter .gutter {
+    border: 1px solid #ddd !important;
+    box-sizing: border-box !important;
+    border-right: none !important;
+}
+.syntaxhighlighter .gutter .line {
+    border-right: 1px solid #ddd !important;
+}
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+    box-sizing: border-box !important;
+}
+.syntaxhighlighter .toolbar {
+    display: none;
+    background-color: #5da1fa !important;
+}
+
+/* ============================================================
+    media query
+============================================================ */
+
+@media screen and (max-width: 768px) {
+
+    /* table */
+    .tbl_group.row table tbody tr th,
+    .tbl_group.row table tbody tr td,
+    .tbl_group.column table thead tr th,
+    .tbl_group.column table tbody tr td {
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+}

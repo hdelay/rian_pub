@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리앙 퍼블리싱 가이드</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- SyntaxHighlighter -->
+    <script type="text/javascript" src="../syntaxhighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+	<link type="text/css" rel="stylesheet" href="../syntaxhighlighter/styles/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- js -->
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/common.js"></script>
+
+</head>
+<body>
+
+<div class="wrap">
+    
+    <!-- aside -->
+    <aside class="gnb">
+        <h1 class="logo"><a href="./index.html" title="메인으로 이동">리앙 퍼블리싱 가이드 로고</a></h1>
+        <nav>
+            <ul>
+                <li><a href="./menu_01.html">프로젝트 환경</a></li>
+                <li><a href="./menu_02.html">HTML 작업규칙</a></li>
+                <li><a href="./menu_03.html">CSS 작업규칙</a></li>
+                <li><a href="./menu_04.html">컴포넌트 라이브러리</a></li>
+                <li><a href="./menu_05.html">레이아웃</a></li>
+                <li><a href="./menu_06.html">js 라이브러리</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- //aside -->
+
+    <div class="content_wrap">
+        <!-- header -->
+        <header>
+            <div class="header_info">
+                <h2>HTML 작업규칙</h2>
+            </div>
+            <div class="btn_menu">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- main -->
+        <div class="main">
+
+            <div class="main_in">
+
+                <div class="left">
+                    
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_02_01">head 구조</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_01_01">meta, title, link, script 순서로 요소를 선언</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <meta charset="UTF-8">
+                                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        <title>Document</title>
+
+                                        <!-- favicon -->
+                                        <link rel="icon" href="../images/favicon.ico">
+
+                                        <!-- css -->
+                                        <link rel="stylesheet" href="../css/.reset.css">
+                                        <link rel="stylesheet" href="../css/.common.css">
+                                        <link rel="stylesheet" href="../css/.style.css">
+
+                                        <!-- js -->
+                                        <script src="../js/.jquery-3.6.0.js"></script>
+                                        <script src="../js/.common.js"></script>
+
+                                        <!-- 기타 css/js -->
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- script language="javascript" 속성은 HTML4 이전 버전의 하위 호환성을 위해 사용하는 비표준 속성이므로 사용하지 않는다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_02_02">시멘틱 마크업</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_02_01">side메뉴가 없을 경우</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <div class="wrap">
+                                            <!-- header -->
+                                            <header></header>
+                                            <!-- //header -->
+            
+                                            <!-- section -->
+                                            <section>
+                                                메인 컨테이너
+                                            </section>
+                                            <!-- //section -->
+            
+                                            <!-- footer -->
+                                            <footer></footer>
+                                            <!-- //footer -->
+                                        </div>
+                                    </pre>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_02_02">side메뉴가 있을 경우</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <div class="wrap">
+                                            <!-- header -->
+                                            <header></header>
+                                            <!-- //header -->
+            
+                                            <!-- section -->
+                                            <section>
+                                                <!-- aside -->
+                                                <aside></aside>
+                                                <!-- //aside -->
+                                                메인 컨테이너
+                                            </section>
+                                            <!-- //section -->
+            
+                                            <!-- footer -->
+                                            <footer></footer>
+                                            <!-- //footer -->
+                                        </div>
+                                    </pre>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_02_03">a, button, input 요소</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_03_01">a</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <a href="./html/page.html" class="" title="">경로가 지정된 버튼</a>
+                                        <a href="" class="" title="">경로가 지정된 버튼</a>
+                                    </pre>
+
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 링크/버튼요소에는 반드시 텍스트를 사용해야 한다.</li>
+                                            <li>- href속성은 생략을 금지한다.</li>
+                                            <li>- 문서간 연결이 되어있는 버튼은 a태그를 사용한다</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_03_02">button</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <button type="button" title="버튼">버튼</button>
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 클릭함으로서 이벤트가 발생하는 것은 button태그를 사용한다.</li>
+                                            <li>- type을 명시하지 않으면 submit으로 실행하기 때문에 type="button"으로 지정해야 한다.</li>
+                                            <li>- button type="submit" 은 폼을 전송하는 기능을 담당한다. [default]</li>
+                                            <li>- button type="reset" 은 폼에 입력한 내용을 초기화 하는 기능을 담당한다.</li>
+                                            <li>- button type="button"은 js로 기능구현 인터페이스를 조작할 수 있다. 디자인적 관점에서도 input요소와 달리 button은 자유롭다. button태그 사이에 다른 태그들을 삽입 가능하다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_03_03">input</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <input type="button">
+                                    </pre>
+
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 사용자의 입력을 서버로 전송하기 위한 버튼으로 전달하는 값을 받거나 전달할 때 사용한다.</li>
+                                            <li>- input태그는 가상선택자(::before, ::after)를 사용할 수 없다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_02_04">table 요소</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_04_01">table 마크업</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <div class="tbl_group">
+                                            <table>
+                                                <caption>파일/폴더 규칙</caption>
+                                                <colgroup>
+                                                    <col width="25%"/>
+                                                    <col width="25%"/>
+                                                    <col width="25%"/>
+                                                    <col width="25%"/>
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"></th>
+                                                        <th scope="col"></th>
+                                                        <th scope="col"></th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 웹접근성을 위해 caption/th scope 작성은 필수이다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_02_05">label 요소</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_02_06">html 코드 작성 규칙</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_06_01">표준문법의 사용</dt>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 속성의 값은 큰따옴표("")로 묶는다.</li>
+                                            <li>- 특수기호는 Entity name을 사용하여 entity 코드로 변환한다.</li>
+                                            <li>- 종료태그를 반드시 선언한다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_06_02">주의 해야할 특수기호 Entity name</dt>
+                                <dd>
+                                    <div class="tbl_group column">
+                                        <table>
+                                            <caption>주의 해야할 특수기호</caption>
+                                            <colgroup>
+                                                <col width="30%"/>
+                                                <col width="70%"/>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="row">구분</th>
+                                                    <th scope="row">Entity Name</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr>
+                                                    <th scope="row">""</th>
+                                                    <td><xmp>&quot;</xmp></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">&</th>
+                                                    <td><xmp>&amp;</xmp></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">&lt;</th>
+                                                    <td><xmp>&lt;</xmp></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">&gt;</th>
+                                                    <td><xmp>&gt;</xmp></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">&nbsp;</th>
+                                                    <td><xmp>&nbsp;</xmp></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">&middot;</th>
+                                                    <td><xmp>&middot;</xmp></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_06_03">종료 태그가 필요한 요소</dt>
+                                <dd>
+                                    <div class="tbl_group column">
+                                        <table>
+                                            <caption>종료 태그가 필요한 요소</caption>
+                                            <colgroup>
+                                                <col width="30%"/>
+                                                <col width="70%"/>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="row">구분</th>
+                                                    <th scope="row">Element Name</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr>
+                                                    <th scope="row">줄바꿈</th>
+                                                    <td><xmp><br /></xmp></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">테이블</th>
+                                                    <td><xmp><col /></xmp></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">메타</th>
+                                                    <td><xmp><meta /></xmp></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">구분선</th>
+                                                    <td><xmp><hr /></xmp></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">이미지</th>
+                                                    <td><xmp><img /></xmp></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">인풋</th>
+                                                    <td><xmp><input /></xmp></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_06_04">주석</dt>
+                                <dd>
+                                    <pre class="brush: html;">
+                                        <!-- 주석 -->
+                                        <div></div>
+                                        <!-- //주석 -->
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 시작과 끝의 표시는 //로 구분한다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_06_05">코드 들여쓰기</dt>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 1탭 들여쓰기 하며, 1탭의 크기는 공백 4칸으로 설정한다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_06_06">빈줄</dt>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 가독성을 고려하여 빈 줄을 추가한다. 단, 1줄을 초과하지 않는다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_02_06_07">마크업 유의사항</dt>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- p 태그 안에는 p, div, ul 등 다른 블럭요소가 들어갈 수 없다. ( display:inline 속성을 적용해도 소용없음)</li>
+                                            <li>- p 태그는 문단을 구분하는 용도로만 사용하고 영역을 구분하는 용도로 사용하지 말 것.</li>
+                                            <li>- a 태그에 삽입된 img 태그에는 이미지맵을 사용할 수 없다.</li>
+                                            <li>- a 태그 안에는 a태그가 들어갈 수 없다.</li>
+                                            <li>- form 태그 안에는 form태그가 들어갈 수 없다.</li>
+                                            <li>- label 태그 안에는 label태그가 들어갈 수 없다.</li>
+                                            <li>- pre 태그 안에는 img, object, big, small, sub, sup태그가 들어갈 수 없다.</li>
+                                            <li>- button 태그 안에는 input, select, textarea, label, button, form, fieldset, iframe, isindex태그가 들어갈 수 없다.</li>
+                                            <li>- button 태그의 type 속성을 지정하지 않았을 때 IE6, IE7 의 경우 submit 기능으로 동작하므로 폼 값을 전송하는 용도로 사용하지 않을 경우 type="button"을 지정</li>
+                                            <li>
+                                                - 태그의 중첩에 유의<br />
+                                                &lt;em&gt;&lt;strong&gt;내용&lt;/em&gt;&lt;/strong&gt; (X)<br />
+                                                &lt;em&gt;&lt;strong&gt;내용&lt;/strong&gt;&lt;/em&gt; (O)
+                                            </li>
+                                            <li>- 하나의 ID는 페이지에서 한번만 사용할 것 (스타일은 적용되나 책갈피 기능이나 스크립트를 정상적으로 사용할 수 없음)</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="right">
+                    <ul>
+                        <li><a href="#menu_02_01">head 구조</a></li>
+                        <li><a href="#menu_02_02">시멘틱 마크업</a></li>
+                        <li>
+                            <a href="#menu_02_03">a, button, input 요소</a>
+                            <ul>
+                                <li><a href="#menu_02_03_01">a 버튼</a></li>
+                                <li><a href="#menu_02_03_02">button 버튼</a></li>
+                                <li><a href="#menu_02_03_03">input[type="button"]</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#menu_02_04">table 요소</a></li>
+                        <li><a href="#menu_02_05">label 요소</a></li>
+                        <li>
+                            <a href="#menu_02_06">html 코드 작성 규칙</a>
+                            <ul>
+                                <li><a href="#menu_02_06_01">표준문법의 사용</a></li>
+                                <li><a href="#menu_02_06_02">주의해야할 특수기호 Entity</a></li>
+                                <li><a href="#menu_02_06_03">종료태그가 필요한 요소</a></li>
+                                <li><a href="#menu_02_06_04">주석</a></li>
+                                <li><a href="#menu_02_06_05">코드 들여쓰기</a></li>
+                                <li><a href="#menu_02_06_06">빈줄</a></li>
+                                <li><a href="#menu_02_06_07">마크업 유의사항</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- //main -->
+
+        <footer>
+            <div class="copyright">COPYRIGHT(C) RIAN COMMUNICATIONS ALL RIGHTS RESERVED.</div>
+        </footer>
+    </div>
+
+</div>
+
+</body>
+</html>

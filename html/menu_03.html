@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리앙 퍼블리싱 가이드</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- SyntaxHighlighter -->
+    <script type="text/javascript" src="../syntaxhighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+	<link type="text/css" rel="stylesheet" href="../syntaxhighlighter/styles/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- js -->
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/common.js"></script>
+
+</head>
+<body>
+
+<div class="wrap">
+    
+    <!-- aside -->
+    <aside class="gnb">
+        <h1 class="logo"><a href="./index.html" title="메인으로 이동">리앙 퍼블리싱 가이드 로고</a></h1>
+        <nav>
+            <ul>
+                <li><a href="./menu_01.html">프로젝트 환경</a></li>
+                <li><a href="./menu_02.html">HTML 작업규칙</a></li>
+                <li><a href="./menu_03.html">CSS 작업규칙</a></li>
+                <li><a href="./menu_04.html">컴포넌트 라이브러리</a></li>
+                <li><a href="./menu_05.html">레이아웃</a></li>
+                <li><a href="./menu_06.html">js 라이브러리</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- //aside -->
+
+    <div class="content_wrap">
+        <!-- header -->
+        <header>
+            <div class="header_info">
+                <h2>CSS 작업규칙</h2>
+            </div>
+            <div class="btn_menu">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- main -->
+        <div class="main">
+
+            <div class="main_in">
+
+                <div class="left">
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_03_01">css 폴더 구조</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_01_01"></dt>
+                                <dd>
+                                    <div class="tbl_group column">
+                                        <table>
+                                            <caption>주의 해야할 특수기호</caption>
+                                            <colgroup>
+                                                <col width="30%"/>
+                                                <col width="20%"/>
+                                                <col width="50%"/>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="row">폴더</th>
+                                                    <th scope="row">파일명</th>
+                                                    <th scope="row">설명</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="3">css</th>
+                                                    <td>common.css</td>
+                                                    <td>컴포넌트 스타일<br/>h1~h6, input, textarea, button, a, table 등 공통 컴포넌트</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>style.css</td>
+                                                    <td>페이지 스타일<br/>header, footer, layout, aside 등 공통 레이아웃과 사업안내, 로그인 페이지 등 스타일링이 필요한 페이지 스타일</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>reset.css</td>
+                                                    <td>css 리셋스타일<br/>css 리셋스타일과 font, color를 설정</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_03_02">네이밍 규칙</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_02_01">class 네이밍 규칙</dt>
+                                <dd>
+                                    <pre class="brush: css;">
+                                        .main_banner (O) /* 언더바로 단어와 단어사이를 잇는다. */
+                                        .mainBanner (X)
+
+                                        .btn_large (O) /* px크기 말고 소/중/대 로 설정 */
+                                        .btn_300 (X)
+
+                                        .font_warning (O) /* red의 의미 */
+                                        .font_red (X)
+
+                                        .email_group (O) /* 소문자로 시작 */
+                                        .Email_group (X)
+
+                                        .btn_primary_02_on (O) /* 형태_의미_순서_상태 */
+                                        .btn_02_primary_on (X)
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 스타일 적용을 위한 클래스는 단어와 단어 사이를 언더바(_)로 구분한다.</li>
+                                            <li>- 아이디/클래스 이름은 용도를 나타내는 단어를 사용하되, 크기/색상 등의 스타일을 특정짓는 단어를 지양한다.</li>
+                                            <li>- 이름은 영문 대문자, 숫자, 특수문자로 시작할 수 없다.</li>
+                                            <li>- 네이밍의 조합은 '형태_의미_순서_상태'을 기본 순서로 사용한다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt id="menu_03_02_02">첫단어(형태) / 끝단어(상태)</dt>
+                                <dd>
+                                    <div class="tbl_group column">
+                                        <table>
+                                            <caption>첫단어</caption>
+                                            <colgroup>
+                                                <col width="30%"/>
+                                                <col width="30%"/>
+                                                <col width="40%"/>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="row">첫단어</th>
+                                                    <th scope="row">형태/용도</th>
+                                                    <th scope="row">예시</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>box_</td>
+                                                    <td>박스</td>
+                                                    <td>box_input, box_rdo</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>bull_</td>
+                                                    <td>불릿</td>
+                                                    <td>bull_group, bull_arrow</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>list_</td>
+                                                    <td>목록</td>
+                                                    <td>list_box, list_group, list_ulgroup, list_olgroup</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>tbl_</td>
+                                                    <td>테이블</td>
+                                                    <td>tbl_group, tbl_row</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>btn_</td>
+                                                    <td>버튼</td>
+                                                    <td>btn_center, btn_left, btn_right</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>tit_</td>
+                                                    <td>타이틀</td>
+                                                    <td>tit_group, tit_subgroup</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>tab_</td>
+                                                    <td>탭 메뉴</td>
+                                                    <td>tab_menugroup, tab_group</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>tree_</td>
+                                                    <td>트리 메뉴</td>
+                                                    <td>tree_group</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="tbl_group column">
+                                        <table>
+                                            <caption>첫단어</caption>
+                                            <colgroup>
+                                                <col width="30%"/>
+                                                <col width="30%"/>
+                                                <col width="40%"/>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="row">끝단어</th>
+                                                    <th scope="row">용도</th>
+                                                    <th scope="row">비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>_on</td>
+                                                    <td>활성</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>_off</td>
+                                                    <td>비활성</td>
+                                                    <td>생략가능</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>_active</td>
+                                                    <td>활성</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>_over</td>
+                                                    <td>오버/포커스 상태</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_03_03">css 코드 작성규칙</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_03_01">기본규칙</dt>
+                                <dd>
+                                    <pre class="brush: css;">
+                                        @charset "utf-8";
+                                        /* ============================================================
+                                            파일정의 : style.css
+                                            속성순서 : 레이아웃 > 크기/간격 > 박스모양 > 정렬/폰트 > 기타 
+                                        ============================================================ */
+
+                                        /* 세로쓰기 */
+                                        .box_common {
+                                            display: flex;
+                                            width: 100%;
+                                            height: auto;
+                                            padding: 20px;
+                                            margin: 20px;
+                                            border-radius: 20px;
+                                            background-color: #f5f5f5;
+                                            text-align: center;
+                                            font-size: 1em;
+                                            color: #999;
+                                            overflow: hidden;
+                                        }
+
+                                        /* 가로쓰기 */
+                                        .box_common {display: flex; width: 100%; height: auto; padding: 20px; margin: 20px; border-radius: 20px; background-color: #f5f5f5; text-align: center; font-size: 1em; color: #999; overflow: hidden;}
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 마지막 선언된 속성에도 세미콜론(;)을 사용한다.</li>
+                                            <li>- 세로쓰기/가로쓰기는 통일되어야 한다. 예를들어 하고있는 프로젝트에서 세로쓰기로 css를 작성중이면 모든 css는 세로쓰기로 통일 되어야 한다.</li>
+                                            <li>- 종료 주석은 작성하지 않는다.</li>
+                                            <li>- 공통선택자는 웹페이지의 성능저하를 가져오기 때문에 가급적 사용하지않는다. (*)</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_03_02">들여쓰기 / 줄바꿈</dt>
+                                <dd>
+                                    <pre class="brush: css;">
+                                        /* 지향 */
+                                        .parent_class .box_common,
+                                        .parent_class .box_common {margin: 0; padding: 0;}
+                                        .parent_class .box_common {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            margin: 0;
+                                            padding: 0;
+                                        }
+
+                                        /* 지양 */
+                                        .parent_class .box_common, .parent_class .box_common {margin: 0; padding: 0;}
+                                        .parent_class .box_common {
+                                            padding: 0; margin: 0;
+                                            color: #999;
+                                            display: block; width: 100%;
+                                            height: 300px; border: 1px solid #999;
+                                        }
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- CSS 코드 작성시 들여쓰기는 허용하지 않는다. (미디어쿼리 제외)</li>
+                                            <li>- 여러 선택자를 쓰는 경우 줄바꿈 하여 작성한다.</li>
+                                            <li>- CSS 세로쓰기 작성시 모든 속성은 줄바꿈 하여 작성한다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_03_03">주석</dt>
+                                <dd>
+                                    <pre class="brush: css;">
+                                        @charset "utf-8";
+                                        /* ============================================================
+                                            파일정의 : style.css
+                                            속성순서 : 레이아웃 > 크기/간격 > 박스모양 > 정렬/폰트 > 기타 
+                                        ============================================================ */
+
+                                        /* ============================================================
+                                            layout
+                                        ============================================================ */
+                                        /* header */
+
+                                        /* nav */
+
+                                        /* content */
+
+                                        /* footer */
+
+                                        /* ============================================================
+                                            공통
+                                        ============================================================ */
+                                        /* input */
+
+                                        /* radio */
+
+                                        /* button */
+
+                                    </pre>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_03_04">속성 선언 순서</dt>
+                                <dd>
+                                    <div class="tbl_group column">
+                                        <table>
+                                            <caption>속성 선언 순서</caption>
+                                            <colgroup>
+                                                <col width="50%"/>
+                                                <col width="50%"/>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="row">구분</th>
+                                                    <th scope="row">속성</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- 1. 표시 -->
+                                                <tr>
+                                                    <td rowspan="3">1. 표시</td>
+                                                    <td>display</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>flex</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>visibility</td>
+                                                </tr>
+
+                                                <!-- 2. 위치 -->
+                                                <tr>
+                                                    <td rowspan="3">2. 위치</td>
+                                                    <td>position</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>top, bottom, left, right</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>z-index</td>
+                                                </tr>
+
+                                                <!-- 3. 넘침/흐름 -->
+                                                <tr>
+                                                    <td rowspan="2">3. 넘침/흐름</td>
+                                                    <td>overflow</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>float</td>
+                                                </tr>
+
+                                                <!-- 4. 크기/간격 -->
+                                                <tr>
+                                                    <td rowspan="4">4. 크기/간격</td>
+                                                    <td>width, max-width, min-width</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>height, max-height, min-height</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>margin</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>padding</td>
+                                                </tr>
+
+                                                <!-- 5. 박스모양 -->
+                                                <tr>
+                                                    <td rowspan="3">5. 박스모양</td>
+                                                    <td>border</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>background</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>border-radius</td>
+                                                </tr>
+
+                                                <!-- 6. 폰트/정렬 -->
+                                                <tr>
+                                                    <td rowspan="5">6. 폰트/정렬</td>
+                                                    <td>line-height</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>text-align</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>vertical-align</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>font</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>color</td>
+                                                </tr>
+
+                                                <!-- 7. 기타 -->
+                                                <tr>
+                                                    <td>7. 기타</td>
+                                                    <td>언급되지 않은 속성들은 후순위로 적용한다.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_03_05">미디어쿼리</dt>
+                                <dd>
+                                    <pre class="brush: css;">
+                                        /* ============================================================
+                                            media query
+                                        ============================================================ */
+                                        /* width 768px 이하 */
+                                        @media screen and (max-width: 768px) {
+                                            /* 작성한 코드그룹 이름 */
+                                        }
+
+                                        /* width 1200px 이하 */
+                                        @media screen and (max-width: 1200px) {
+                                            /* 작성한 코드그룹 이름 */
+                                        }
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 미디어쿼리 2개이상 영역을 작성할땐 기본 css 주석이름을 그대로 적용한다.(ex)header 반응형 작업시 주석에 header로 통일)</li>
+                                            <li>- 미디어쿼리 모바일 기준점은 768px로 최하 360px로 작업한다</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_03_04">폰트 스타일</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_04_01">글자의 크기와 폰트</dt>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 16px 크기를 기본 폰트로 사용한다.</li>
+                                            <li>- 모바일 반응형의 경우 14px/0.9em 을 사용한다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_04_02">글자 기본 색상</dt>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- 기본적으로 디자인에 지정되어있는 색상을 쓰며, 정해져있지 않다면 기본 #222 color를 사용한다.</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_03_05">리셋 파일</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_05_01">리셋 파일 다운로드</dt>
+                                <dd>
+                                    <div class="tbl_group row">
+                                        <table>
+                                            <caption>리셋 파일 다운로드 테이블</caption>
+                                            <colgroup>
+                                                <col width="35%"/>
+                                                <col width="65%"/>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">리셋 파일 다운로드</th>
+                                                    <td>
+                                                        <div class="txtdown_group">
+                                                            <a href="../download/reset.css" target="_blank" title="파일 다운로드" download>../reset.css</a>
+                                                            <input type="text">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_05_02">리셋 파일 더보기</dt>
+                                <dd>
+                                    <details>
+                                        <summary>코드보기</summary>
+                                        <div>
+                                            <pre class="brush: css;">
+                                                @charset "utf-8";
+        
+                                                html, body {
+                                                    height: 100%;
+                                                }
+                                                body {
+                                                    font-size: 16px;
+                                                    font-family: 'NotoSansKR', Arial, Sans-serif;
+                                                    font-weight: 200;
+                                                    color: #222;
+                                                }
+                                                table, th, td, input, select, button, textarea, pre {
+                                                    font: inherit;
+                                                    color: inherit;
+                                                }
+                                                body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, select, button, textarea, p, blockquote, table, th, td {
+                                                    margin: 0;
+                                                    padding: 0;
+                                                }
+                                                h1, h2, h3, h4, h5, h6 {
+                                                    font-size: 100%;
+                                                }
+                                                ol, ul {
+                                                    list-style: none;
+                                                }
+                                                img, fieldset {
+                                                    border: 0;
+                                                }
+                                                img {
+                                                    vertical-align: middle;
+                                                }
+                                                a {
+                                                    font-weight: 200;
+                                                    text-decoration: none;
+                                                    color: #222;
+                                                }
+                                                table {
+                                                    border-spacing: 0;
+                                                    border-collapse: inherit;
+                                                    border: 0;
+                                                }
+                                                label {
+                                                    cursor: pointer;
+                                                }
+                                                input, button {
+                                                    border: 0;
+                                                    border-radius: 0;
+                                                }
+                                                textarea {
+                                                    resize: none;
+                                                }
+                                                input, button, select, textarea {
+                                                    vertical-align: middle;
+                                                }
+                                                address, caption, cite, code, dfn, em, var {
+                                                    font-style: normal;
+                                                }
+                                                hr {
+                                                    clear: both;
+                                                    display: none;
+                                                }
+                                                blockquote, q {
+                                                    quotes: none;
+                                                }
+                                                abbr, acronym {
+                                                    border: 0;
+                                                }
+                                                legend, caption {
+                                                    position: absolute;
+                                                    line-height: 0;
+                                                    width: 0;
+                                                    height: 0;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    text-indent: -99999px;
+                                                    font-size: 0;
+                                                }
+                                                article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+                                                    display: block;
+                                                }
+                                                
+                                                @font-face {
+                                                    font-family: "NotoSansKR";
+                                                    src: url("../font/NotoSansKR-Thin.otf");
+                                                    font-weight: 100;
+                                                    font-style: normal;
+                                                }
+                                                @font-face {
+                                                    font-family: "NotoSansKR";
+                                                    src: url("../font/NotoSansKR-Light.otf");
+                                                    font-weight: 200;
+                                                    font-style: normal;
+                                                }
+                                                @font-face {
+                                                    font-family: "NotoSansKR";
+                                                    src: url("../font/NotoSansKR-Regular.otf");
+                                                    font-weight: 300;
+                                                    font-style: normal;
+                                                }
+                                                @font-face {
+                                                    font-family: "NotoSansKR";
+                                                    src: url("../font/NotoSansKR-Medium.otf");
+                                                    font-weight: 400;
+                                                    font-style: normal;
+                                                }
+                                                @font-face {
+                                                    font-family: "NotoSansKR";
+                                                    src: url("../font/NotoSansKR-Bold.otf");
+                                                    font-weight: 500;
+                                                    font-style: normal;
+                                                }
+                                                @font-face {
+                                                    font-family: "NotoSansKR";
+                                                    src: url("../font/NotoSansKR-Black.otf");
+                                                    font-weight: 600;
+                                                    font-style: normal;
+                                                }
+                                                
+                                                .hidden {
+                                                    position: absolute;
+                                                    visibility: hidden;
+                                                    overflow: hidden;
+                                                    height: 0;
+                                                    line-height: 0;
+                                                    width: 0;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    font: 0/0 Arial;
+                                                }
+                                                
+                                                
+                                                @media screen and (max-width: 768px) {
+                                                    body {
+                                                        font-size: .9em;
+                                                    }
+                                                }
+                                            </pre>
+                                        </div>
+                                    </details>
+                                    
+                                </dd>
+                                
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_03_06">이미지 삽입</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_01_01"></dt>
+                                <dd>
+                                    <pre class="brush: html;">
+
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- </li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="content_group">
+
+                        <div class="tit_group">
+                            <h3 id="menu_03_07">크로스 브라우징</h3>
+                        </div>
+
+                        <div class="dl_list_group">
+                            <dl>
+                                <dt id="menu_03_01_01"></dt>
+                                <dd>
+                                    <pre class="brush: html;">
+
+                                    </pre>
+                                </dd>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- </li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="right">
+                    <ul>
+                        <li><a href="#menu_03_01">css 폴더 구조</a></li>
+                        <li><a href="#menu_03_02">네이밍 규칙</a></li>
+                        <li>
+                            <a href="#menu_03_03">css 코드 작성규칙</a>
+                            <ul>
+                                <li><a href="#menu_03_03_01">기본규칙</a></li>
+                                <li><a href="#menu_03_03_02">들여쓰기/줄바꿈</a></li>
+                                <li><a href="#menu_03_03_03">주석</a></li>
+                                <li><a href="#menu_03_03_04">속성 선언 순서</a></li>
+                                <li><a href="#menu_03_03_05">미디어쿼리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#menu_03_04">폰트 스타일</a>
+                            <ul>
+                                <li><a href="#menu_03_04_01">글자의 크기와 폰트</a></li>
+                                <li><a href="#menu_03_04_02">글자 기본 색상</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#menu_03_05">리셋 파일</a></li>
+                        <li><a href="#menu_03_06">이미지 삽입</a></li>
+                        <li><a href="#menu_03_07">크로스 브라우징</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- //main -->
+
+        <footer>
+            <div class="copyright">COPYRIGHT(C) RIAN COMMUNICATIONS ALL RIGHTS RESERVED.</div>
+        </footer>
+    </div>
+
+</div>
+
+</body>
+</html>
