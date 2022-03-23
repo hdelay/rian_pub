@@ -841,20 +841,46 @@
 
                         <div class="dl_list_group">
                             <dl>
-                                <dt id="menu_03_01_01"></dt>
+                                <dt id="menu_03_03_01_01">이미지 삽입</dt>
                                 <dd>
-                                    <pre class="brush: html;">
+                                    <pre class="brush: css;">
+                                        
+                                       
+                                        /* ============================================================
+                                            파일정의 : html sheet
+                                            이미지 삽입의 예제
+                                        ============================================================ */
+                                        /* <img> 태그로 사용 */
+                                        <img src=" 이미지 링크 " al="대체 텍스트">
+
+                                        /* &#123background-image : url()&#125 사용 */
+                                         {
+                                            background-image: url(" 이미지 링크 ");
+                                        }
 
                                     </pre>
                                 </dd>
                                 <dd>
                                     <div class="ul_list_group">
+                                        <div><p> &lt;img&gt; 태그 사용하는 경우 </p></div>
                                         <ul>
-                                            <li>- </li>
+                                            <li>- 이미지에 문구등 사용되어 의미를 가지는 경우 : alt 태그를 사용해 의미를 부여한다. </li>
+                                            <li>- 프린트가 필요한 경우 : 백그라운드 이미지는 출력시 포함되지 않는다. </li>
+                                            <li>- 검색에 노출이 되어야 하는경우. </li>
+                                        </ul>
+                                        <div><p> background-image 사용하는 경우 </p></div>
+                                        <ul>
+                                            <li>- 일정부분만 선택해 보여줄 경우 : ex - 텍스트옆의 아이콘, hover버튼 etc </li>
+                                            <li>- 이미지 위에 텍스트가 들어가는 경우 : 백그라운드 중요도가 높지 않을때. </li>
+                                            <li>- CSS sprites를 사용해 이미지 속도를 향상 : 이미지의 수정, 관리가 용이하고 아이콘 영역도 미리 읽어들여 로딩속도도 향상된다.</li>
+                                            <li>- 출력시 이미지를 제거해야 하는 경우 </li>
+                                            <li>- 콘텐츠와 관련이 없어 이미지를 불러오지 못해도 상관 없을경우.</li>
                                         </ul>
                                     </div>
                                 </dd>
                             </dl>
+                            <div class="dl_list_group">
+                            </div>
                         </div>
 
                     </div>
