@@ -288,6 +288,9 @@ header .btn_menu a.on span:nth-child(3) {
 
 
 /* 목차 index */
+.index {
+    width: 100%;
+}
 .index h3 {
     width: 100%;
     margin-bottom: 20px;
