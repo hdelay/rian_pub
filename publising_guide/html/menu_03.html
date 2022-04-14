@@ -644,6 +644,56 @@
 
                         <div class="dl_list_group">
                             <dl>
+                                <dt id="menu_03_04_01">폰트 파일의 종류</dt>
+                                <dd>
+                                    <div class="ul_list_group">
+                                        <ul>
+                                            <li>- TTF - 윈도우에 설치하는 폰트 파일( 우리가 흔히 폰트 다운받으면 이 파일을 받게됨. 더블클릭으로 윈도우에 설치 ) 하지만 브라우저 별로 지원하는 폰트파일이 다르므로 변환이 필요 </li>
+                                            <li>- EOT - IE만지원. IE8이하버전은 eot파일만 인식함</li>
+                                            <li> OTF/TTF - 크롬, 파이어폭스, 오페라, 사파리, 안드로이드, ios에서 인식. 쉽게 복제가능해서 WOFF형식이 만들어짐</li>
+                                            <li>WOFF - OTF/TTF를 이용한 압축버전으로 빠르게 로드됨.</li>
+                                            <li>SVG/SVGZ - 파일크기를 가볍게 하여 모바일사용에 용이. 파이어폭스, IE에서는 지원 하지 않음.</li>
+                                            <li>즉, 브라우저 및 버전에 따라 지원하는 폰트파일종류가 다르므로 사이트안에 여러 폰트파일을 등록해놓는다.( 변환하는 사이트 : <a href="https://www.fontsquirrel.com/tools/webfont-generator">https://www.fontsquirrel.com/tools/webfont-generator</a> )</li>
+                                        </ul>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <pre class="brush: css;">
+                                        /* ============================================================
+                                            폰트 문법 예시
+                                        ============================================================ */
+                                        @font-face {
+                                            font-family: "폰트명";
+                                            src: local("폰트명1"), 
+                                                 local("폰트명2"), 
+                                                 url("폰트명3.woff") format("폰트포맷");
+                                            font-weight: 폰트굵기;
+                                            font-style: 폰트style값;
+                                        }
+
+                                        @font-face {
+                                            font-family: "Nanum Gothic";
+                                            src: local("NanumGothic-Regular"),
+                                            src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
+                                                 url('/fonts/NanumBarunGothic.woff') format('woff'),
+                                                 url('/fonts/NanumBarunGothic.ttf') format('truetype'),
+                                                 url('/fonts/NanumBarunGothic.svg#NanumGothic') format('svg'),
+                                                 url('/fonts/NanumBarunGothic.woff') format('woff');
+                                            font-style: normal;
+                                            font-weight: 400;
+                                        }
+                                          
+                                          -----------------------
+                                          
+                                        body{ 
+                                            font-family : "Nanum Gothic", "serif"; 
+                                        }
+                                    </pre>
+                                </dd>
+                            </dl>
+
+                        <div class="dl_list_group">
+                            <dl>
                                 <dt id="menu_03_04_01">폰트 리소스</dt>
                                 <dd>
                                     <div class="ul_list_group">
