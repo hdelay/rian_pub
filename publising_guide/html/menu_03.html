@@ -662,25 +662,15 @@
                                         /* ============================================================
                                             폰트 문법 예시
                                         ============================================================ */
-                                        @font-face {
-                                            font-family: "폰트명";
-                                            src: local("폰트명1"), 
-                                                 local("폰트명2"), 
-                                                 url("폰트명3.woff") format("폰트포맷");
-                                            font-weight: 폰트굵기;
-                                            font-style: 폰트style값;
-                                        }
 
-                                        @font-face {
-                                            font-family: "Nanum Gothic";
-                                            src: local("NanumGothic-Regular"),
-                                            src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
-                                                 url('/fonts/NanumBarunGothic.woff') format('woff'),
-                                                 url('/fonts/NanumBarunGothic.ttf') format('truetype'),
-                                                 url('/fonts/NanumBarunGothic.svg#NanumGothic') format('svg'),
-                                                 url('/fonts/NanumBarunGothic.woff') format('woff');
+                                        @font-face{
+                                            font-family: 'NotoSansKR';
                                             font-style: normal;
-                                            font-weight: 400;
+                                            font-weight: 100;
+                                            src:url('../font/NotoSansKR-Thin.eot');
+                                            src:url('../font/NotoSansKR-Thin.eot?#iefix') format("embedded-opentype"),
+                                                url('../font/NotoSansKR-Thin.woff') format("woff"),
+                                                url('../font/NotoSansKR-Thin.otf') format("opentype");
                                         }
                                           
                                           -----------------------
